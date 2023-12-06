@@ -14,6 +14,7 @@ function App() {
           <ul>
             <li><Link to="/" >Home</Link></li>
             <li><Link to="/productlist" >Product List</Link></li>
+            <li className="cart"><a>🛒Cart</a></li>
           </ul>
         </nav>
         <div className="contentWindow">

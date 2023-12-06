@@ -37,7 +37,6 @@ nav {
   background-color: #202020;
   color: #C8C8C8;
   text-align: center;
-  padding: 10px;
   margin: 0;
 }
 
@@ -49,6 +48,7 @@ ul {
   display: flex;
   flex-direction: row;
   height: 100%;
+  width: 100%;
   margin: 0;
   padding: 0;
 }
@@ -57,16 +57,20 @@ li {
   height: 40px;
   list-style: none;
   margin: 0;
+  padding: 5px;
   border: 1px solid black;
+}
+.cart {
+  margin: 0 0 0 auto;
 }
 
 li a {
   display: flex;
-  color: #C8C8C8;
-  text-decoration: none;
+  align-items: center;
   width: 100%;
   height: 100%;
-  margin: 10px;
+  color: #C8C8C8;
+  text-decoration: none;
 }
 
 li:hover {
