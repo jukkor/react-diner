@@ -1,0 +1,12 @@
+.productPage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.productList {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
