@@ -6,7 +6,7 @@ const ProductCard = (props) => {
     <>
       <div className='productCard'>
         <h3>{props.name}</h3>
-        <img src={"http://localhost:5000/" + props.image} />
+        <img src={props.image} />
         <div className='priceAndCart'>
           <h4>{props.price}€</h4>
           <button>Add to cart</button>

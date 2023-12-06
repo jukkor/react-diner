@@ -8,7 +8,6 @@ const ProductList = () => {
   const FetchProducts = async () => {
     let productList = await fetch('http://localhost:5000/api/dishes');
     let result = await productList.json();
-    console.log(result)
     setProducts(result);
   }
 
@@ -28,7 +27,7 @@ const ProductList = () => {
               name={item.name}
               price={item.price}
               description={item.description}
-              image={item.image}
+              image={"http://localhost:5000/" + item.image}
             />
           ))}
         </div>
