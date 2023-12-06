@@ -26,6 +26,7 @@
 }
 .modalContent img {
   width: 100%;
+  border-radius: 20px;
 }
 
 .forehead {
@@ -37,7 +38,14 @@
   flex-wrap: nowrap;
 }
 .forehead .closeButton {
-  margin: 0px 5px;
+  margin-left: 5px;
+  background-color: #202020;
+}
+.forehead h3 {
+  display: flex;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
 }
 
 .productDescription {
