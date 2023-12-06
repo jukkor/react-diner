@@ -1,23 +1,48 @@
 body {
   margin: 0;
-  margin-top: 40px;
-  height: 100%;
+  min-height: 100%;
   max-width: 100%;
   font-family: 'Courier New', Courier, monospace;
-  background-color: #111;
-  color: white;
+  background-color: #101010;
+  color: #C8C8C8;
+}
+
+.appContainer {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.contentWindow {
+  flex: 1;
 }
 
 nav {
   display: flex;
-  position: fixed;
+  position: sticky;
   top: 0;
   left: 0;
   right: 0;
-  background-color: #333;
+  background-color: #202020;
   width: 100%;
   margin: 0;
   padding: 0;
+}
+
+.footer {
+  position: sticky;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: #202020;
+  color: #C8C8C8;
+  text-align: center;
+  padding: 10px;
+  margin: 0;
+}
+
+.footer p {
+  margin: 10px;
 }
 
 ul {
@@ -37,7 +62,7 @@ li {
 
 li a {
   display: flex;
-  color: white;
+  color: #C8C8C8;
   text-decoration: none;
   width: 100%;
   height: 100%;
@@ -45,21 +70,6 @@ li a {
 }
 
 li:hover {
-  background-color: black;
+  background-color: #101010;
   cursor: pointer;
-}
-
-.footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  background-color: #333;
-  color: white;
-  text-align: center;
-  padding: 10px;
-}
-
-.footer p {
-  margin: 10px;
 }
