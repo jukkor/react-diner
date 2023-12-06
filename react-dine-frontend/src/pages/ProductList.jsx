@@ -1,10 +1,15 @@
 import { useEffect, useState } from "react";
 import ProductCard from "../components/ProductCard";
 import './ProductList.css'
+import ProductDetailsModal from "../components/ProductDetailsModal";
+
 
 const ProductList = () => {
   const [products, setProducts] = useState([]);
+  const [selectedCard, setSelectedCard] = useState(null);
 
+
+  // Fetch stuff
   const FetchProducts = async () => {
     let productList = await fetch('http://localhost:5000/api/dishes');
     let result = await productList.json();
@@ -14,6 +19,18 @@ const ProductList = () => {
   useEffect(() => {
     FetchProducts();
   }, []);
+
+
+  // Modal stuff
+  const onCardClick = (props) => {
+    setSelectedCard(props);
+    console.log(props)
+    console.log(props.name)
+  }
+
+  const closeModal = () => {
+    setSelectedCard(null);
+  }
 
 
   return (
@@ -28,9 +45,11 @@ const ProductList = () => {
               price={item.price}
               description={item.description}
               image={"http://localhost:5000/" + item.image}
+              onCardClick={onCardClick}
             />
           ))}
         </div>
+        {selectedCard && <ProductDetailsModal props={selectedCard} onClose={closeModal} />}
       </div>
     </>
   )

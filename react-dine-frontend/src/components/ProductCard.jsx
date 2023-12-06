@@ -4,7 +4,7 @@ const ProductCard = (props) => {
 
   return (
     <>
-      <div className='productCard'>
+      <div className='productCard' onClick={() => props.onCardClick(props)}>
         <h3>{props.name}</h3>
         <img src={props.image} />
         <div className='priceAndCart'>
