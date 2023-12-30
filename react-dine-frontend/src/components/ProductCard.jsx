@@ -10,7 +10,17 @@ const ProductCard = (props) => {
         <div className='priceAndCart' onClick={(e) => e.stopPropagation()}>
           {/* stopPropagation stops modal from opening when clicking 'add to cart' */}
           <h4>{props.price}€</h4>
-          <button>Add to cart</button>
+          <button onClick={
+            () => {
+              const item = {
+                id: props.id,
+                name: props.name,
+                price: props.price,
+                image: props.image
+              }
+              props.addToCart(item)
+            }
+          }>Add to cart</button>
         </div>
       </div>
     </>

@@ -1,0 +1,17 @@
+.cartContainer {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #242424;
+  width: 600px;
+  height: 500px;
+  position: fixed;
+  padding: 10px;
+  top: 52px;
+  right: 0px;
+  border-radius: 10px;
+  overflow: scroll;
+}
