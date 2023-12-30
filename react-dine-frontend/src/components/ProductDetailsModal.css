@@ -20,13 +20,14 @@
   flex-wrap: nowrap;
   width: 600px;
   border: 1px solid white;
-  border-radius: 20px;
+  border-radius: 10px;
   margin: 10px;
   padding: 10px 30px;
 }
+
 .modalContent img {
   width: 100%;
-  border-radius: 20px;
+  border-radius: 10px;
 }
 
 .forehead {
@@ -37,10 +38,12 @@
   align-items: center;
   flex-wrap: nowrap;
 }
+
 .forehead .closeButton {
   margin-left: 5px;
   background-color: #202020;
 }
+
 .forehead h3 {
   display: flex;
   height: 40px;
@@ -50,7 +53,7 @@
 
 .productDescription {
   background-color: #202020;
-  border-radius: 20px;
+  border-radius: 10px;
   text-align: center;
   padding: 10px;
 }

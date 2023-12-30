@@ -7,12 +7,13 @@
   flex-wrap: nowrap;
   width: 300px;
   border: 1px solid white;
-  border-radius: 20px;
+  border-radius: 10px;
   margin: 10px;
   padding: 10px 30px;
 }
+
 .productCard :hover {
-  cursor:pointer;
+  cursor: pointer;
 }
 
 .priceAndCart {
@@ -31,7 +32,7 @@
 
 h3 {
   background-color: #202020;
-  border-radius: 20px;
+  border-radius: 10px;
   width: 100%;
   text-align: center;
 }
