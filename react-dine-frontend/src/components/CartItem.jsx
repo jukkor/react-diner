@@ -18,6 +18,10 @@ const CartItem = (props) => {
       <h4 className='cartItemName'>{props.name}</h4>
       <p>{props.price}€</p>
 
+      <button
+        onClick={() => handleButtonClick(-1)}
+      >-</button>
+
       <div className='cartItemQuantity'>
         <p>Quantity:</p>
         <input
@@ -30,10 +34,6 @@ const CartItem = (props) => {
               props.changeQuantity(Number(e.target.value), props.id);
             }} />
       </div>
-
-      <button
-        onClick={() => handleButtonClick(-1)}
-      >-</button>
 
       <button
         onClick={() => handleButtonClick(1)}

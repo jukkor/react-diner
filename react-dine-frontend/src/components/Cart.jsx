@@ -31,9 +31,11 @@ const Cart = (props) => {
             <p>Total: {total.toFixed(2)}€</p>
             {props.atCheckout
               ? <></>
-              : <button onClick={() => props.setIsCartActive(false)}>
-                <Link to={'/checkout'}>Checkout</Link>
-              </button>
+              : <Link to={'/checkout'}>
+                <button onClick={() => props.setIsCartActive(false)}>
+                  Checkout
+                </button>
+              </Link>
             }
           </div>
         </>

@@ -21,10 +21,14 @@ const Checkout = (props) => {
           <div>
             <h2>Address</h2>
           </div>
-          <div className='checkoutInputField'>
-            <input type='textinput' placeholder={"Address"} />
-            <input type='textinput' placeholder={"City"} />
-            <input type='textinput' placeholder={"Zip Code"} />
+          <div>
+            <div className='checkoutInputField'>
+              <input type='textinput' placeholder={"Address"} />
+            </div>
+            <div className='checkoutInputField'>
+              <input type='textinput' placeholder={"City"} />
+              <input type='textinput' placeholder={"Zip Code"} />
+            </div>
           </div>
         </div>
 
@@ -32,14 +36,21 @@ const Checkout = (props) => {
           <div>
             <h2>Payment Details</h2>
           </div>
-          <div className='checkoutInputField'>
-            <input type='textinput' placeholder={"Card Number"} />
-            <input type='textinput' placeholder={"CVV"} />
-            <input type='textinput' placeholder={"Expiry Date"} />
-            <input type='textinput' placeholder={"Full Name On Card"} />
+          <div>
+            <div className='checkoutInputField'>
+              <input type='textinput' placeholder={"Card Number"} />
+              <input type='textinput' placeholder={"CVV"} />
+            </div>
+            <div className='checkoutInputField'>
+              <input type='textinput' placeholder={"Expiry Date"} />
+              <input type='textinput' placeholder={"Full Name On Card"} />
+            </div>
           </div>
         </div>
-        <button>Submit</button>
+
+        <div className='checkoutSubmitButtonContainer'>
+          <button className='checkoutSubmitButton'>Finalize Order</button>
+        </div>
       </div>
       <div className="cartContents">
         <Cart
