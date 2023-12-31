@@ -1,0 +1,43 @@
+.checkoutContainer {
+  height: 100%;
+  display: flex;
+  background-color: #303030;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.checkoutContainer .cartContainer {
+  position: relative;
+  top: 0;
+  right: 0;
+  height: auto;
+  width: auto;
+}
+
+.checkoutInputField {
+  height: 100%;
+  display: flex;
+  background-color: #303030;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.checkoutInputField input {
+  height: 50px;
+  width: 300px;
+  margin: 20px;
+}
+
+.checkoutOrderPersonalInfoForm {
+  width: 33%;
+}
+
+.cartContents {
+  width: 33%;
+}

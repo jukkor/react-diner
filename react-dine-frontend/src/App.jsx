@@ -7,6 +7,7 @@ import Badge from './components/Badge'
 import Cart from "./components/Cart";
 
 import './App.css';
+import Checkout from "./pages/Checkout";
 
 
 function App() {
@@ -96,6 +97,15 @@ function App() {
               element={
                 <ProductList
                   addToCart={addToCart}
+                />
+              }
+            />
+            <Route
+              path="/checkout"
+              element={
+                <Checkout
+                  cart={cart}
+                  changeQuantity={changeQuantity}
                 />
               }
             />

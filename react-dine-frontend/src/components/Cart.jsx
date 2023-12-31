@@ -1,6 +1,7 @@
 import CartItem from "./CartItem"
 
 import './Cart.css'
+import { Link } from "react-router-dom";
 
 
 const Cart = (props) => {
@@ -26,8 +27,14 @@ const Cart = (props) => {
               changeQuantity={props.changeQuantity}
             />
           ))}
-          <div>
+          <div className="cartTotalAndCheckout">
             <p>Total: {total.toFixed(2)}€</p>
+            {props.atCheckout
+              ? <></>
+              : <button>
+                <Link to={'/checkout'}>Checkout</Link>
+              </button>
+            }
           </div>
         </>
         : <p>No items in cart. Add some!</p>
