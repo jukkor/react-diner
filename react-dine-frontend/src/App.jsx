@@ -1,11 +1,12 @@
 import { Route, Routes, Link } from "react-router-dom";
+import { useState, useEffect } from "react";
+
 import Home from './pages/Home';
 import ProductList from './pages/ProductList';
 import Badge from './components/Badge'
+import Cart from "./components/Cart";
 
 import './App.css';
-import { useState, useEffect } from "react";
-import Cart from "./components/Cart";
 
 
 function App() {
@@ -23,9 +24,9 @@ function App() {
 
 
   const addToCart = (itemToBeAdded) => {
-    const newItemInCart = cart.find((itemAlreadyInCart => itemAlreadyInCart.id === itemToBeAdded.id))
+    const newItemAlreadyInCart = cart.find((itemAlreadyInCart => itemAlreadyInCart.id === itemToBeAdded.id))
 
-    if (!newItemInCart) {
+    if (!newItemAlreadyInCart) {
       const newItem = {
         id: itemToBeAdded.id,
         name: itemToBeAdded.name,
@@ -37,11 +38,10 @@ function App() {
 
     } else {
       setCart(
-        cart.map(
-          (itemAlreadyInCart) =>
-            itemAlreadyInCart.id === itemToBeAdded.id
-              ? { ...itemAlreadyInCart, quantity: itemAlreadyInCart.quantity + 1 }
-              : itemAlreadyInCart
+        cart.map((itemAlreadyInCart) =>
+          itemAlreadyInCart.id === itemToBeAdded.id
+            ? { ...itemAlreadyInCart, quantity: itemAlreadyInCart.quantity + 1 }
+            : itemAlreadyInCart
         ));
     }
   }
@@ -52,11 +52,10 @@ function App() {
       setCart(updatedCart);
     } else {
       setCart((prevCart) =>
-        prevCart.map(
-          (itemAlreadyInCart) =>
-            itemAlreadyInCart.id === idOfItemToBeChanged
-              ? { ...itemAlreadyInCart, quantity: amount }
-              : itemAlreadyInCart
+        prevCart.map((itemAlreadyInCart) =>
+          itemAlreadyInCart.id === idOfItemToBeChanged
+            ? { ...itemAlreadyInCart, quantity: amount }
+            : itemAlreadyInCart
         )
       );
     }
@@ -81,18 +80,28 @@ function App() {
             </li>
           </ul>
         </nav>
+
         {isCartActive && <Cart cart={cart} changeQuantity={changeQuantity} />}
+
         <div className="contentWindow">
           <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/productlist"
+            <Route
+              path="/"
+              element={
+                <Home />
+              }
+            />
+            <Route
+              path="/productlist"
               element={
                 <ProductList
-                  addToCart={addToCart} />
+                  addToCart={addToCart}
+                />
               }
             />
           </Routes>
         </div>
+
         <footer className="footer">
           <p>&copy; 2023 Big Kebab. All rights reserved.</p>
         </footer>

@@ -1,5 +1,7 @@
 import { useState } from 'react'
+
 import './CartItem.css'
+
 
 const CartItem = (props) => {
 
@@ -15,6 +17,7 @@ const CartItem = (props) => {
       <img src={props.image} className='cartImage' />
       <h4 className='cartItemName'>{props.name}</h4>
       <p>{props.price}€</p>
+
       <div className='quantity'>
         <p>Quantity:</p>
         <input
@@ -27,6 +30,7 @@ const CartItem = (props) => {
               props.changeQuantity(Number(e.target.value), props.id);
             }} />
       </div>
+
       <button
         onClick={() => handleButtonClick(-1)}
       >-</button>

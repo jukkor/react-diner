@@ -1,4 +1,5 @@
 import CartItem from "./CartItem"
+
 import './Cart.css'
 
 
@@ -31,7 +32,6 @@ const Cart = (props) => {
         </>
         : <p>No items in cart. Add some!</p>
       }
-
     </div>
   )
 }

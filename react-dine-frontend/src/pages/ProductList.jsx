@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
+
 import ProductCard from "../components/ProductCard";
-import './ProductList.css'
 import ProductDetailsModal from "../components/ProductDetailsModal";
+
+import './ProductList.css'
 
 
 const ProductList = ({ addToCart }) => {
