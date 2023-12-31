@@ -16,8 +16,8 @@ function App() {
     const cartInLocalStorage = JSON.parse(localStorage.getItem('cart'));
     return cartInLocalStorage ? cartInLocalStorage : [];
   });
-  const [isCartActive, setIsCartActive] = useState(false);
 
+  const [isCartActive, setIsCartActive] = useState(false);
 
   useEffect(() => {
     localStorage.setItem('cart', JSON.stringify(cart));
@@ -82,7 +82,12 @@ function App() {
           </ul>
         </nav>
 
-        {isCartActive && <Cart cart={cart} changeQuantity={changeQuantity} />}
+        {isCartActive
+          && <Cart
+            cart={cart}
+            changeQuantity={changeQuantity}
+            setIsCartActive={setIsCartActive}
+          />}
 
         <div className="contentWindow">
           <Routes>
