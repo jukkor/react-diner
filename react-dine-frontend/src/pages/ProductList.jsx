@@ -35,7 +35,7 @@ const ProductList = ({ addToCart }) => {
 
   return (
     <>
-      <div className="productPage">
+      <div className="productListPage">
         <h1>PRODUCT LIST</h1>
         <div className="productList">
           {products.map((item) => (

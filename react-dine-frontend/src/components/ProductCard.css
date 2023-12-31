@@ -14,9 +14,10 @@
 
 .productCard :hover {
   cursor: pointer;
+  background-color: #404040;
 }
 
-.priceAndCart {
+.productCardPriceAndCart {
   width: 100%;
   display: flex;
   flex-direction: row;

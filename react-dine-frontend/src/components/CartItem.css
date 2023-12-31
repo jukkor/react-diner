@@ -14,18 +14,19 @@
   display: inline-block;
   margin: 10px;
   text-align: center;
+  color: rgba(255, 255, 255, 0.87);
 }
 
-.cartImage {
+.cartItemImage {
   max-height: 100px;
   border-radius: 10px;
 }
 
-.itemAmount {
+.CartItemAmount {
   width: 20px;
 }
 
-.quantity {
+.cartItemQuantity {
   display: flex;
   height: 100%;
   flex-direction: column;

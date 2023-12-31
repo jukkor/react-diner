@@ -14,15 +14,15 @@ const CartItem = (props) => {
 
   return (
     <div className="cartItem">
-      <img src={props.image} className='cartImage' />
+      <img src={props.image} className='cartItemImage' />
       <h4 className='cartItemName'>{props.name}</h4>
       <p>{props.price}€</p>
 
-      <div className='quantity'>
+      <div className='cartItemQuantity'>
         <p>Quantity:</p>
         <input
           type='textfield'
-          className='itemAmount'
+          className='CartItemAmount'
           value={quantity}
           onChange={
             (e) => {

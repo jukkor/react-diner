@@ -6,18 +6,18 @@ const ProductDetailsModal = ({ props, onClose }) => {
   return (
     <>
       <div className='productDetailsModal' onClick={() => onClose()}>
-        <div className='modalContent' onClick={(e) => e.stopPropagation()}>
+        <div className='productDetailsModalContent' onClick={(e) => e.stopPropagation()}>
           {/* stopPropagation stops the modal from closing when clicked inside the content. idk why tho */}
 
-          <div className='forehead'>
+          <div className='productDetailsModalForehead'>
             <h3>{props.name}</h3>
-            <button className='closeButton' onClick={onClose}>X</button>
+            <button className='productDetailsModalCloseButton' onClick={onClose}>X</button>
           </div>
 
           <img src={props.image} />
-          <p className='productDescription'>{props.description}</p>
+          <p className='productDetailsModalProductDescription'>{props.description}</p>
 
-          <div className='priceAndCart'>
+          <div className='productDetailsModalPriceAndCart'>
             <h4>{props.price}€</h4>
             <button onClick={
               () => {
