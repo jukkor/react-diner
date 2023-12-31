@@ -13,6 +13,22 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.flexRow {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+}
+
+.flexCol {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.scrollable {
+  overflow: auto;
+}
+
 a {
   font-weight: 500;
   text-decoration: inherit;

@@ -9,7 +9,7 @@ const Checkout = (props) => {
       <div className="checkoutOrderPersonalInfoForm">
         <div>
           <div>
-            <h2>Name</h2>
+            <h3>Name</h3>
           </div>
           <div className='checkoutInputField'>
             <input type='textinput' placeholder={"First Name"} />
@@ -19,7 +19,7 @@ const Checkout = (props) => {
 
         <div>
           <div>
-            <h2>Address</h2>
+            <h3>Address</h3>
           </div>
           <div>
             <div className='checkoutInputField'>
@@ -34,15 +34,17 @@ const Checkout = (props) => {
 
         <div>
           <div>
-            <h2>Payment Details</h2>
+            <h3>Payment Details</h3>
           </div>
           <div>
             <div className='checkoutInputField'>
               <input type='textinput' placeholder={"Card Number"} />
-              <input type='textinput' placeholder={"CVV"} />
             </div>
             <div className='checkoutInputField'>
+              <input type='textinput' placeholder={"CVV"} />
               <input type='textinput' placeholder={"Expiry Date"} />
+            </div>
+            <div className='checkoutInputField'>
               <input type='textinput' placeholder={"Full Name On Card"} />
             </div>
           </div>
@@ -52,13 +54,11 @@ const Checkout = (props) => {
           <button className='checkoutSubmitButton'>Finalize Order</button>
         </div>
       </div>
-      <div className="cartContents">
-        <Cart
-          cart={props.cart}
-          changeQuantity={props.changeQuantity}
-          atCheckout={true}
-        />
-      </div>
+      <Cart
+        cart={props.cart}
+        changeQuantity={props.changeQuantity}
+        atCheckout={true}
+      />
     </div>
   )
 }

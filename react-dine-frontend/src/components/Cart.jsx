@@ -1,7 +1,8 @@
+import { Link } from "react-router-dom";
+
 import CartItem from "./CartItem"
 
 import './Cart.css'
-import { Link } from "react-router-dom";
 
 
 const Cart = (props) => {
@@ -16,17 +17,19 @@ const Cart = (props) => {
       {total !== 0
         ?
         <>
-          {props.cart.map((item) => (
-            <CartItem
-              key={item.id}
-              id={item.id}
-              image={item.image}
-              name={item.name}
-              price={item.price}
-              quantity={item.quantity}
-              changeQuantity={props.changeQuantity}
-            />
-          ))}
+          <div className="flexCol scrollable">
+            {props.cart.map((item) => (
+              <CartItem
+                key={item.id}
+                id={item.id}
+                image={item.image}
+                name={item.name}
+                price={item.price}
+                quantity={item.quantity}
+                changeQuantity={props.changeQuantity}
+              />
+            ))}
+          </div>
           <div className="cartTotalAndCheckout">
             <p>Total: {total.toFixed(2)}€</p>
             {props.atCheckout

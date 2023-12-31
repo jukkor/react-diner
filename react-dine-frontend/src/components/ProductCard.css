@@ -14,7 +14,6 @@
 
 .productCard :hover {
   cursor: pointer;
-  background-color: #404040;
 }
 
 .productCardPriceAndCart {
@@ -31,7 +30,7 @@
   border-radius: 10px;
 }
 
-h3 {
+.productCard h3 {
   background-color: #202020;
   border-radius: 10px;
   width: 100%;
