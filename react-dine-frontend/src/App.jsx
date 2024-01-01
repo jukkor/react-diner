@@ -62,6 +62,11 @@ function App() {
     }
   };
 
+  const clearCart = () => {
+    setCart([]);
+    localStorage.setItem('cart', JSON.stringify(cart));
+  }
+
   return (
     <>
       <div className="appContainer">
@@ -111,6 +116,7 @@ function App() {
                 <Checkout
                   cart={cart}
                   changeQuantity={changeQuantity}
+                  clearCart={clearCart}
                 />
               }
             />

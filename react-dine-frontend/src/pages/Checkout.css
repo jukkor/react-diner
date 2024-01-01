@@ -17,6 +17,7 @@
 
 .checkoutContainer .cartContainer {
   position: relative;
+  height: 795px;
   z-index: 0;
   top: 0;
   right: 0;
@@ -59,5 +60,11 @@
 }
 
 .checkoutContainer h3 {
+  text-align: center;
+}
+
+.checkoutOrderPersonalInfoForm p {
+  color: red;
+  border: 1px red solid;
   text-align: center;
 }
