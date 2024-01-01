@@ -45,7 +45,7 @@ const ProductList = ({ addToCart }) => {
               name={item.name}
               price={item.price}
               description={item.description}
-              image={"http://localhost:5000/" + item.image}
+              image={"https://react-diner-jukkor.onrender.com/" + item.image}
               onCardClick={onCardClick}
               addToCart={addToCart}
             />
