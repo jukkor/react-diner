@@ -13,7 +13,7 @@ const ProductList = ({ addToCart }) => {
 
   // Fetch stuff
   const FetchProducts = async () => {
-    let productList = await fetch('http://localhost:5000/api/dishes');
+    let productList = await fetch('https://react-diner-jukkor.onrender.com/api/dishes');
     let result = await productList.json();
     setProducts(result);
   }
